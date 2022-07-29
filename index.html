@@ -19,12 +19,22 @@
 <body>
     <!-- start header -->
     <header>
-        <div class="container ">
-            <div class="navbar bg-base-100">
+        <div class="container">
+            <div class="navbar md:justif bg-base-100">
                 <div class="navbar-start">
-                    <a class=" ">
+                    <a>
                         <img src="assets/img/header/logo.png" class="w-20 xl:w-full" alt="logo">
                     </a>
+                </div>
+                <!-- mobile menu btn -->
+                <div class="absolute menuBtn right-8 lg:hidden">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="inline-block w-5 h-5 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
                 <div class="navbar-center hidden lg:flex primary-menu">
                     <ul class="menu menu-horizontal p-0">
@@ -36,104 +46,139 @@
                         <li><a href="#">Register</a></li>
                     </ul>
                 </div>
-                <div class="lg:navbar-end">
+                <div class="hidden md:flex  lg:navbar-end">
                     <a class="btn btn-outline text-base xl:px-7 xl:text-xl leading-30  btn-primary">Register</a>
                 </div>
             </div>
         </div>
+        <!-- mobile menu -->
+        <div class="mobileMenu hideMenu absolute top-0 bg-black min-w-[350px] z-20 h-full">
+            <div class="absolute right-6 top-4">
+                <button class="btn btn-circle closeMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="pl-8 space-y-5 pt-5 text-white text-opacity-60">
+                <li><a href="#" class="hover:text-primary">Home</a></li>
+                <li><a href="#" class="hover:text-primary">Courses</a></li>
+                <li><a href="#" class="hover:text-primary">Deals</a></li>
+                <li><a href="#" class="hover:text-primary">Success</a></li>
+                <li><a href="#" class="hover:text-primary">About</a></li>
+                <li><a href="#" class="hover:text-primary">Register</a></li>
+            </ul>
+        </div>
     </header>
     <!-- end Header -->
     <!-- main -->
-    <main>
+    <main class="mt-2">
         <!-- carousel slider -->
         <section>
             <div class="container">
-                <div class="carousel w-full h-[700px]">
-                    <div id="slide1" class="carousel-item dark-overlay relative w-full ">
-                        <div>
-                            <img src="assets/img/cover/cover-1.png" class="w-full h-full object-cover" />
-                            <div class="absolute top-0 left-0 w-full h-[700px] flex justify-center items-center">
-                                <div class="text-center relative">
-                                    <div>
-                                        <h2 class="text-5xl leading-85 
+                <div class="relative">
+                    <div class="hero">
+                        <div class="swiper-button-prev
+                         -left-4
+                         btn ring-1 btn-circle hover:bg-primary"></div>
+                        <div class="swiper-button-next 
+                        -right-4
+                        btn btn-circle bg-primary hover:bg-secondary"></div>
+                    </div>
+                    <div class="swiper heroSlider h-[700px]">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="dark-overlay" style="background:url('assets/img/cover/cover-1.png');height:700px;
+                            background-repeat: no-repeat; background-position: center;">
+
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-[700px] flex justify-center items-center">
+                                        <div class="text-center relative">
+                                            <div>
+                                                <h2 class="text-3xl sm:text-4xl lg:text-5xl ;g:leading-85 
                                     font-semibold text-white
                                     ">Get Started Digital <br> Learning</h2>
-                                    </div>
-                                    <div class="mt-7 max-w-[600px]">
-                                        <p class="text-lg leading-30 text-neutral ">It is a long established fact that a
-                                            reader will be distracted by the readable content of a page when looking at
-                                            its
-                                            layout.</p>
-                                    </div>
-                                    <div class="mt-7">
-                                        <a href="#"
-                                            class="btn btn-md px-5 btn-primary text-white capitalize  font-semibold text-xl leading-30">Get
-                                            Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide4" class="btn btn-circle">❮</a>
-                            <a href="#slide2" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                    <div id="slide2" class="carousel-item relative dark-overlay w-full">
-                        <div>
-                            <img src="assets/img/cover/cover-2.jpg" class="w-full h-full object-cover" />
-                            <div class="absolute top-0 left-0 w-full h-[700px] flex justify-center items-center">
-                                <div class="text-center relative">
-                                    <div>
-                                        <h2 class="text-5xl leading-85 
-                                                        font-semibold text-white
-                                                        ">Get Started Digital <br> Learning</h2>
-                                    </div>
-                                    <div class="mt-7 max-w-[600px]">
-                                        <p class="text-lg leading-30 text-neutral ">It is a long established fact that a
-                                            reader will be distracted by the readable content of a page when looking at
-                                            its
-                                            layout.</p>
-                                    </div>
-                                    <div class="mt-7">
-                                        <a href="#"
-                                            class="btn btn-md px-5 btn-primary text-white capitalize  font-semibold text-xl leading-30">Get
-                                            Started</a>
+                                            </div>
+                                            <div class="mt-7 max-w-[600px]">
+                                                <p class="text-base sm:text-lg  leading-30 text-neutral ">It is a long
+                                                    established fact that a
+                                                    reader will be distracted by the readable content of a page when
+                                                    looking
+                                                    at
+                                                    its
+                                                    layout.</p>
+                                            </div>
+                                            <div class="mt-7">
+                                                <a href="#"
+                                                    class="btn btn-md px-5 btn-primary text-white capitalize  font-semibold text-xl leading-30">Get
+                                                    Started</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide1" class="btn btn-circle">❮</a>
-                            <a href="#slide3" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                    <div id="slide3" class="carousel-item dark-overlay relative w-full">
-                        <div>
-                            <img src="assets/img/cover/cover-3.jpg" class="w-full h-full object-cover" />
-                            <div class="absolute top-0 left-0 w-full h-[700px] flex justify-center items-center">
-                                <div class="text-center relative">
-                                    <div>
-                                        <h2 class="text-5xl leading-85 
-                                                    font-semibold text-white
-                                                    ">Get Started Digital <br> Learning</h2>
-                                    </div>
-                                    <div class="mt-7 max-w-[600px]">
-                                        <p class="text-lg leading-30 text-neutral ">It is a long established fact that a
-                                            reader will be distracted by the readable content of a page when looking at
-                                            its
-                                            layout.</p>
-                                    </div>
-                                    <div class="mt-7">
-                                        <a href="#"
-                                            class="btn btn-md px-5 btn-primary text-white capitalize  font-semibold text-xl leading-30">Get
-                                            Started</a>
+                            <div class="swiper-slide">
+                                <div class="dark-overlay" style="background:url('assets/img/cover/cover-2.jpg');height:700px;
+                            background-repeat: no-repeat; background-position: center;">
+
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-[700px] flex justify-center items-center">
+                                        <div class="text-center relative">
+                                            <div>
+                                                <h2 class="text-3xl sm:text-4xl lg:text-5xl ;g:leading-85 
+                                    font-semibold text-white
+                                    ">Get Started Digital <br> Learning</h2>
+                                            </div>
+                                            <div class="mt-7 max-w-[600px]">
+                                                <p class="text-base sm:text-lg  leading-30 text-neutral ">It is a long
+                                                    established fact that a
+                                                    reader will be distracted by the readable content of a page when
+                                                    looking
+                                                    at
+                                                    its
+                                                    layout.</p>
+                                            </div>
+                                            <div class="mt-7">
+                                                <a href="#"
+                                                    class="btn btn-md px-5 btn-primary text-white capitalize  font-semibold text-xl leading-30">Get
+                                                    Started</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide2" class="btn btn-circle">❮</a>
-                            <a href="#slide4" class="btn btn-circle">❯</a>
+                            <div class="swiper-slide">
+                                <div class="dark-overlay" style="background:url('assets/img/cover/cover-3.jpg');height:700px;
+                            background-repeat: no-repeat; background-position: center;">
+
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-[700px] flex justify-center items-center">
+                                        <div class="text-center relative">
+                                            <div>
+                                                <h2 class="text-3xl sm:text-4xl lg:text-5xl ;g:leading-85 
+                                    font-semibold text-white
+                                    ">Get Started Digital <br> Learning</h2>
+                                            </div>
+                                            <div class="mt-7 max-w-[600px]">
+                                                <p class="text-base sm:text-lg  leading-30 text-neutral ">It is a long
+                                                    established fact that a
+                                                    reader will be distracted by the readable content of a page when
+                                                    looking
+                                                    at
+                                                    its
+                                                    layout.</p>
+                                            </div>
+                                            <div class="mt-7">
+                                                <a href="#"
+                                                    class="btn btn-md px-5 btn-primary text-white capitalize  font-semibold text-xl leading-30">Get
+                                                    Started</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,7 +186,7 @@
         </section>
         <!-- carousel slider -->
         <!-- courses  start-->
-        <section class="pt-130 pb-10">
+        <section class="pt-16 lg:pt-130 pb-10">
             <div class="container">
                 <div class="grid grid-cols-1 ">
                     <div class="text-center">
@@ -157,17 +202,18 @@
                 </div>
                 <!-- course items -->
                 <div class="pt-50">
-                    <div class="grid grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <!-- single item -->
                         <div class="shadow-md border rounded-md">
-                            <div class="flex items-center">
-                                <div class="mr-6">
+                            <div class="md:flex items-center">
+                                <div class="md:mr-6">
                                     <!-- course image -->
-                                    <div>
-                                        <img src="assets/img/course/course-1.png" alt="course">
+                                    <div class="md:h-[200px] md:w-[200px]">
+                                        <img src="assets/img/course/course-1.png" class="w-full h-full object-cover"
+                                            alt="course">
                                     </div>
                                 </div>
-                                <div>
+                                <div class="p-6 md:p-0 ">
                                     <!-- course description -->
                                     <div>
                                         <h3 class="card-title">Fundamental Of UI/UX Design</h3>
@@ -185,14 +231,15 @@
                         </div>
                         <!-- single item two -->
                         <div class="shadow-md border rounded-md">
-                            <div class="flex items-center">
-                                <div class="mr-6">
+                            <div class="md:flex items-center">
+                                <div class="md:mr-6">
                                     <!-- course image -->
-                                    <div>
-                                        <img src="assets/img/course/course-2.png" alt="course">
+                                    <div class="md:h-[200px] md:w-[200px]">
+                                        <img src="assets/img/course/course-2.png" class="w-full object-cover"
+                                            alt="course">
                                     </div>
                                 </div>
-                                <div>
+                                <div class="p-6 md:p-0">
                                     <!-- course description -->
                                     <div>
                                         <h3 class="card-title">Javascript Basic to advanced</h3>
@@ -210,14 +257,15 @@
                         </div>
                         <!-- single item three -->
                         <div class="shadow-md border rounded-md">
-                            <div class="flex items-center">
-                                <div class="mr-6">
+                            <div class="md:flex items-center">
+                                <div class="md:mr-6">
                                     <!-- course image -->
-                                    <div>
-                                        <img src="assets/img/course/course-3.png" alt="course">
+                                    <div class="md:h-[200px] md:w-[200px]">
+                                        <img src="assets/img/course/course-3.png" class="w-full h-auto object-cover"
+                                            alt="course">
                                     </div>
                                 </div>
-                                <div>
+                                <div class="p-6 md:p-0">
                                     <!-- course description -->
                                     <div>
                                         <h3 class="card-title">Fullstack Web Development</h3>
@@ -235,14 +283,15 @@
                         </div>
                         <!-- single item -->
                         <div class="shadow-md border rounded-md">
-                            <div class="flex items-center">
-                                <div class="mr-6">
+                            <div class="md:flex items-center">
+                                <div class="md:mr-6">
                                     <!-- course image -->
-                                    <div>
-                                        <img src="assets/img/course/course-4.png" alt="course">
+                                    <div class="md:h-[200px] md:w-[200px]">
+                                        <img src="assets/img/course/course-4.png" class="w-full h-auto object-cover"
+                                            alt="course">
                                     </div>
                                 </div>
-                                <div>
+                                <div class="p-6 md:p-0">
                                     <!-- course description -->
                                     <div>
                                         <h3 class="card-title">Digital Marketing</h3>
@@ -260,14 +309,15 @@
                         </div>
                         <!-- single item five -->
                         <div class="shadow-md border rounded-md">
-                            <div class="flex items-center">
+                            <div class="md:flex items-center">
                                 <div class="mr-6">
                                     <!-- course image -->
-                                    <div>
-                                        <img src="assets/img/course/course-5.png" alt="course">
+                                    <div class="md:h-[200px] md:w-[200px]">
+                                        <img src="assets/img/course/course-5.png" class="w-full h-auto object-cover"
+                                            alt="course">
                                     </div>
                                 </div>
-                                <div>
+                                <div class="p-6 md:p-0">
                                     <!-- course description -->
                                     <div>
                                         <h3 class="card-title">Photography Basic Rules</h3>
@@ -285,14 +335,15 @@
                         </div>
                         <!-- single item 6 -->
                         <div class="shadow-md border rounded-md">
-                            <div class="flex items-center">
-                                <div class="mr-6">
+                            <div class="md:flex items-center">
+                                <div class="md:mr-6">
                                     <!-- course image -->
-                                    <div>
-                                        <img src="assets/img/course/course-6.png" alt="course">
+                                    <div class="md:h-[200px] md:w-[200px]">
+                                        <img src="assets/img/course/course-6.png" class="w-full h-auto object-cover"
+                                            alt="course">
                                     </div>
                                 </div>
-                                <div>
+                                <div class="p-6 md:p-0">
                                     <!-- course description -->
                                     <div>
                                         <h3 class="card-title">Motion Graphics</h3>
@@ -310,26 +361,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-12">
+                <div class="text-center mt-14">
                     <a href="#" class="btn btn-primary text-white">see more courses</a>
                 </div>
             </div>
         </section>
         <!-- courses  end-->
         <!-- working start -->
-        <section class="bg-info mt-20">
+        <section class="bg-info mt-5 pb-8 lg:mt-20 lg:pb-0">
             <div class="container">
-                <div class="grid gap-0 grid-cols-2">
+                <div class="grid gap-0 lg:grid-cols-2">
                     <!-- image -->
                     <div>
-                        <img src="assets/img/working.png" alt="">
+                        <img src="assets/img/working.png" alt="working" class="w-full">
                     </div>
-                    <div class="px-2 pt-28">
+                    <div class="px-2 pt-10 xl:pt-28 lg:pl-7">
                         <!-- description -->
                         <div>
                             <h3 class="section-title">Explore The elearning Institute</h3>
                         </div>
-                        <div class="mt-8">
+                        <div class="mt-4 lg:mt-8">
                             <div>
                                 <p class="text">There are many variations of passages of Lorem Ipsum available, but the
                                     majority have suffered alteration in some form,
@@ -346,7 +397,7 @@
                             </div>
                         </div>
                         <!-- ratings -->
-                        <div class="flex justify-between mt-8">
+                        <div class="flex flex-wrap  justify-between mt-8">
                             <div>
                                 <h4 class="text-semibold text-4xl leading-60 text-accent">3.2K+</h4>
                                 <span class="block text-secondary font-medium text-xl leading-30 capitalize">online
@@ -363,7 +414,7 @@
                                     review</span>
                             </div>
                         </div>
-                        <div class="mt-10">
+                        <div class="mt-10 lg:mt-14">
                             <a href="#" class="btn btn-primary text-white">read more</a>
                         </div>
                     </div>
@@ -372,11 +423,15 @@
             </div>
         </section>
         <!-- working end -->
-        <section class="py-130">
+        <!-- subscribe -->
+        <section class="py-12 lg:py-130">
             <div class="container">
-                <div class="grid grid-cols-2 items-center bg-primary py-20 px-24 rounded-md">
+                <div class="grid md:grid-cols-2 items-center bg-primary  rounded-md
+                px-8 py-10
+                 lg:px-24  lg:py-20
+                   ">
                     <div>
-                        <div>
+                        <div class="text-center md:text-start">
                             <div>
                                 <h2 class="section-title text-white">Ready to join?</h2>
                             </div>
@@ -389,7 +444,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="text-end mt-5">
+                        <div class="text-center md:text-end mt-5">
                             <label for="my-modal" class="btn text-primary modal-button">Register Now</label>
                             <input type="checkbox" id="my-modal" class="modal-toggle" />
                             <div class="modal">
@@ -433,7 +488,7 @@
         <section class="pb-20">
             <div class="container">
                 <div class="grid grid-cols-1 max-w-[550px]">
-                    <div>
+                    <div class="text-center md:text-start">
                         <div>
                             <h2 class="section-title">Meet Our Successfull Students</h2>
                         </div>
@@ -454,7 +509,7 @@
                             <figure>
                                 <img src="assets/img/student/student-1.png" class="w-full object-cover " alt="student">
                             </figure>
-                            <div class="card-body mt-2">
+                            <div class="p-6  mt-2">
                                 <div>
                                     <h3 class="font-semibold text-xl leading-30 text-darkTwo ">Awlad Hossain</h3>
                                 </div>
@@ -470,7 +525,7 @@
                             <figure>
                                 <img src="assets/img/student/student-2.png" class="w-full object-cover " alt="student">
                             </figure>
-                            <div class="card-body mt-2">
+                            <div class="p-6  mt-2">
                                 <div>
                                     <h3 class="font-semibold text-xl leading-30 text-darkTwo ">Jannatul Islam</h3>
                                 </div>
@@ -486,7 +541,7 @@
                             <figure>
                                 <img src="assets/img/student/student-3.png" class="w-full object-cover " alt="student">
                             </figure>
-                            <div class="card-body mt-2">
+                            <div class="p-6  mt-2">
                                 <div>
                                     <h3 class="font-semibold text-xl leading-30 text-darkTwo ">Imran Hossain</h3>
                                 </div>
@@ -502,7 +557,7 @@
                             <figure>
                                 <img src="assets/img/student/student-4.png" class="w-full object-cover " alt="student">
                             </figure>
-                            <div class="card-body mt-2">
+                            <div class="p-6  mt-2">
                                 <div>
                                     <h3 class="font-semibold text-xl leading-30 text-darkTwo ">Nishi Akter</h3>
                                 </div>
@@ -784,7 +839,7 @@
         </section>
         <!-- feedback end -->
         <!-- FAQ Start -->
-        <section class="pb-20">
+        <section class="pb-20 mt-32 sm:mt-0">
             <div class="container">
                 <div class="grid grid-cols-1">
                     <div class="mx-auto text-center max-w-[650px]">
@@ -806,12 +861,19 @@
                             <input type="checkbox" class="peer" />
                             <div
                                 class="collapse-title bg-primary bg-opacity-10 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                <h2 class="font-semibold text-xl leading-30 text-success capitalize">what are the
+                                <h2 class="font-semibold text-lg lg:text-xl lg:leading-30 text-success capitalize">what
+                                    are the
                                     difference between flexbox and grid?</h2>
                             </div>
                             <div
                                 class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                <p>hello</p>
+                                <p>
+                                    Flexbox is designed for a one-dimensional layout. We can work either row or column
+                                    with flexbox.
+                                    Grid is designed for a two-dimensional layout. We can work on rows and columns at
+                                    the same time.
+
+                                </p>
                             </div>
                         </div>
                         <!-- accordion item -->
@@ -820,12 +882,18 @@
                             <input type="checkbox" class="peer" />
                             <div
                                 class="collapse-title bg-primary bg-opacity-10 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                <h2 class="font-semibold text-xl leading-30 text-success capitalize">what are the
+                                <h2 class="font-semibold text-base lg:text-xl leading-30 text-success capitalize">what
+                                    are the
                                     difference between bootstrap and tailwind?</h2>
                             </div>
                             <div
                                 class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                <p>hello</p>
+                                <p>Bootstrap is a component-based framework—this pre-defined component makes responsive
+                                    website development faster and
+                                    easier.
+                                    Tailwind is a utility-based framework. These utility classes help developers two
+                                    make the user interfaces rapidly.
+                                </p>
                             </div>
                         </div>
                         <!-- accordion item -->
@@ -835,13 +903,20 @@
                             <input type="checkbox" class="peer" />
                             <div
                                 class="collapse-title bg-primary bg-opacity-10 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                <h2 class="font-semibold text-xl leading-30 text-success capitalize">what is css box
+                                <h2 class="font-semibold text-base lg:text-xl leading-30 text-success capitalize">what
+                                    is css box
                                     model?</h2>
 
                             </div>
                             <div
                                 class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                <p>hello</p>
+                                <p>Every element that can be displayed on a web page is comprised of one or more
+                                    rectangular boxes. CSS box model typically
+                                    describes how these rectangular boxes are laid out on a web page. These boxes can
+                                    have different properties and can
+                                    interact with each other in different ways, but every box has a content area and
+                                    optional surrounding padding, border,
+                                    and margin areas.</p>
                             </div>
                         </div>
                         <!-- accordion item -->
@@ -850,13 +925,18 @@
                             <input type="checkbox" class="peer" />
                             <div
                                 class="collapse-title bg-primary bg-opacity-10 text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                <h2 class="font-semibold text-xl leading-30 text-success capitalize">what is a semantic
+                                <h2 class="font-semibold text-base lg:text-xl leading-30 text-success capitalize">what
+                                    is a semantic
                                     tag?</h2>
 
                             </div>
                             <div
                                 class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-                                <p>hello</p>
+                                <p>The core characteristic of a semantic element is that it clearly communicated its
+                                    meaning to both the developer and the
+                                    browser. These elements clearly define its content.
+                                    The Semantic Tags are header,footer,nav,article,section,aside.
+                                </p>
                             </div>
                         </div>
                         <!-- accordion item -->
@@ -867,7 +947,7 @@
         </section>
         <!-- FAQ END -->
         <!-- branding company -->
-        <section class="pb-20 hidden lg:block">
+        <section class="pb-20 hidden xl:block">
             <div class="container">
                 <div class="grid grid-cols-1">
                     <div class="text-center">
@@ -915,15 +995,25 @@
                         </span>
                     </address>
                     <div class="mt-3">
-                        <a href="#" class="text-[15px] text-white hover:text-primary text-opacity-70 capitalize">privecy policy</a> | 
-                        <a href="#" class="text-[15px] text-white  hover:text-primary text-opacity-70 capitalize">terms of use</a>
+                        <a href="#" class="text-[15px] text-white hover:text-primary text-opacity-70 capitalize">privecy
+                            policy</a> |
+                        <a href="#" class="text-[15px] text-white  hover:text-primary text-opacity-70 capitalize">terms
+                            of use</a>
                     </div>
                     <div class="mt-5">
                         <ul class="flex justify-center space-x-5  text-white">
-                            <li><a href="#" class="hover:text-white h-8 w-8 rounded-full text-primary flex justify-center items-center z-10 bg-[#242424] ring-primary"><i class="fa-brands text-xs   fa-facebook-f"></i></a></li>
-                            <li><a href="#" class="hover:text-white h-8 w-8 rounded-full text-primary flex justify-center items-center z-10 bg-[#242424] ring-primary"><i class="fa-brands text-xs  fa-twitter"></i></a></li>
-                            <li><a href="#" class="hover:text-white h-8 w-8 rounded-full text-primary flex justify-center items-center z-10 bg-[#242424] ring-primary"><i class="fa-solid  text-xs fa-music"></i></a></li>
-                            <li><a href="#" class="hover:text-white h-8 w-8 rounded-full text-primary flex justify-center items-center z-10 bg-[#242424] ring-primary"><i class="fa-brands text-xs  fa-linkedin-in"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:text-white h-8 w-8 rounded-full text-primary flex justify-center items-center z-10 bg-[#242424] ring-primary"><i
+                                        class="fa-brands text-xs   fa-facebook-f"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:text-white h-8 w-8 rounded-full text-primary flex justify-center items-center z-10 bg-[#242424] ring-primary"><i
+                                        class="fa-brands text-xs  fa-twitter"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:text-white h-8 w-8 rounded-full text-primary flex justify-center items-center z-10 bg-[#242424] ring-primary"><i
+                                        class="fa-solid  text-xs fa-music"></i></a></li>
+                            <li><a href="#"
+                                    class="hover:text-white h-8 w-8 rounded-full text-primary flex justify-center items-center z-10 bg-[#242424] ring-primary"><i
+                                        class="fa-brands text-xs  fa-linkedin-in"></i></a></li>
                         </ul>
                     </div>
                 </div>
